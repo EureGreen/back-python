@@ -29,4 +29,33 @@
 - delete (удаление)
 - manage (управление - все операции)
 
-### Схема БД:
+
+Инструкция по запуску
+
+Установка зависимостей:
+bash
+pip install -r requirements.txt
+Настройка базы данных MySQL:
+
+
+Создайте базу данных auth_system
+
+Выполните SQL скрипт 
+
+Настройка переменных окружения:
+Создайте файл .env:
+
+env
+DATABASE_URL=mysql+pymysql://username:password@localhost/auth_system
+SECRET_KEY=your-secret-key-here
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+Запуск приложения:
+
+bash
+uvicorn app.main:app --reload
+Доступ к API:
+
+Документация Swagger: http://localhost:8000/docs
+
+ReDoc: http://localhost:8000/redoc
